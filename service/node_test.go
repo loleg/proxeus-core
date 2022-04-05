@@ -9,9 +9,11 @@ func TestList(t *testing.T) {
 	nodeService := NewNodeService(nil)
 
 	if nodeService.List("mailsender") == nil {
-		t.Fail()
+		t.Errorf("Missing mailsender")
+		// t.Fail()
 	}
 	if nodeService.List("priceretriever") == nil {
-		t.Fail()
+		t.Errorf("Missing priceretriever")
+		// t.Fail()
 	}
 }

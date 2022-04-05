@@ -33,7 +33,7 @@ func (me *Context) Lang() string {
 func (me *Context) Session(create bool) *sys.Session {
 	sess, err := getSession(me, create)
 	if err != nil {
-		me.Logger().Error(err)
+		me.Logger().Warn(err)
 		return nil
 	}
 	return sess

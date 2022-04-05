@@ -6,6 +6,7 @@ import (
 
 func TestList(t *testing.T) {
 	if List(nil, "priceretriever") == nil {
-		t.Fail()
+		t.Errorf("Missing priceretriever")
+		// t.Fail()
 	}
 }

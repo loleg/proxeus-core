@@ -103,7 +103,7 @@ cd /srv
 
 cat <<END >.env
 PROXEUS_BLOCKCHAIN_CONTRACT_ADDRESS=0x1d3e5c81bf4bc60d41a8fbbb3d1bae6f03a75f71
-PROXEUS_ENCRYPTION_SECRET_KEY=`dd bs=32 count=1 if="/dev/urandom" | base64 | tr +/ _.`
+PROXEUS_ENCRYPTION_SECRET_KEY="`dd bs=32 count=1 if="/dev/urandom" | base64 | tr +/ _.`"
 PROXEUS_DATA_DIR=./data
 PROXEUS_ALLOW_HTTP=true
 PROXEUS_INFURA_API_KEY=$INFURA
@@ -134,3 +134,5 @@ log "After a minute, open: http://$FQDN:1323/init"
 ## ----------------------------------------------
 
 echo "Installation complete!"
+echo "Check the logs using this command in /srv/proxeus:"
+echo "$ docker-compose logs --tail 10"

@@ -66,7 +66,7 @@
           <tab title="Blockchain settings">
             <animated-input name="settings.blockchainNet" :max="100" :label="$t('Blockchain net')"
                             v-model="settings.blockchainNet">
-              <span class="text-muted">{{$t('Blockchain net explanation','Set the ethereum blockchain net like mainnet or ropsten.')}}</span>
+              <span class="text-muted">{{$t('Blockchain net explanation','Set Ethereum blockchain net like mainnet or goerli.')}}</span>
             </animated-input>
             <animated-input name="settings.infuraApiKey" :max="100" :label="$t('Infura API Key')"
                             v-model="settings.infuraApiKey">
@@ -74,7 +74,7 @@
             </animated-input>
             <animated-input name="settings.blockchainContractAddress" :max="100"
                             :label="$t('Blockchain contract address')" v-model="settings.blockchainContractAddress">
-              <span class="text-muted">{{$t('Blockchain contract address explanation','Set the ethereum contract address which will be used to register files and verify them.')}}</span>
+              <span class="text-muted">{{$t('Blockchain contract address explanation','Set the Ethereum contract address which will be used to register files and verify them.')}}</span>
 
             </animated-input>
             <div class="form-group">

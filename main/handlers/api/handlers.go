@@ -1579,6 +1579,7 @@ func UserDocumentSignatureRequestGetByDocumentIDHandler(e echo.Context) error {
 	requests, err := signatureService.GetById(id, docId)
 	if err != nil {
 		if os.IsNotExist(err) {
+			log.Println("UserDocumentSignatureRequestGetByDocumentIDHandler IsNotExist docId: ", docId)
 			return c.NoContent(http.StatusNotFound)
 		}
 		log.Println("UserDocumentSignatureRequestGetByDocumentIDHandler signatureService.GetById err: ", err.Error())
